@@ -1,0 +1,96 @@
+$text-MonB: "Montserrat-Bold";
+$text-MonReg: "Montserrat-Regular";
+$text-RalReg: "Raleway-Regular";
+$text-MerriwReg: "Merriweather-Regular";
+$text-ColorTitle: #323333;
+$text-Color: #646565;
+$width-md: 768px;
+
+.about {
+    width: 1162px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-rows: 485px;
+    grid-template-columns: 394px .5fr 500px;
+    grid-template-areas: 
+    "image free article";
+    @media (min-width: 400px) and (max-width: 1000px) {
+        width: 95vw;
+        margin-top: 35px;
+        padding-bottom: 35px;
+        grid-template-rows: 430px;
+        grid-template-columns: minmax(150px,350px) minmax(15px,1fr) minmax(185px,500px);
+    }
+    @media (max-width: 399.9px) {
+        width: 85vw;
+        margin-top: 25px;
+        padding-bottom: 25px;
+        grid-template-rows: 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "article";
+    }
+}
+.about__image {
+    grid-area: image;
+    background-image: url(images/about-image.png);
+    background-size: 100% 100%;
+    box-shadow: 0 0 15px 15px rgb(221, 221, 221);
+    @media (max-width: $width-md) {
+        background-size: 350px 430px;
+    }
+    @media (min-width: 400px) and (max-width: 470px) {
+        background-position-x: -130px;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 470.1px) and (max-width: 570px) {
+        background-position-x: -80px;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 570.1px) and (max-width: 630px) {
+        background-position-x: -30px;
+        background-repeat: no-repeat;
+    }
+}
+.about__article {
+    grid-area: article;
+    color: $text-Color;
+    & h4 {
+        margin-top: 0;
+        font: {
+            family: $text-MerriwReg;
+            weight: 700;
+            size: 20px;
+        }
+        letter-spacing: 1.2px;
+        @media (max-width: 499.9px) {
+            font-size: 13px;
+        }
+        @media (min-width: 500px) and (max-width: 1000px) {
+            font-size: 18px;
+        }
+    }
+    & p {
+        font-family: $text-RalReg;
+        letter-spacing: 1px;
+        @media (max-width: 499.9px) {
+            font-size: 11px;
+        }
+        @media (min-width: 500px) and (max-width: 1000px) {
+            font-size: 13px;
+        }
+    }
+    & h5 {
+        font-family: $text-MerriwReg;
+        font-weight: 700;
+        font-size: 17px;
+        letter-spacing: 1.2px;
+        @media (max-width: 499.9px) {
+            font-size: 12px;
+        }
+        @media (min-width: 500px) and (max-width: 1000px) {
+            font-size: 16px;
+        }
+    }
+}

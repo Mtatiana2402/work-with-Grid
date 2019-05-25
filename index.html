@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>GRID_Project</title>
+</head>
+<body>
+
+        <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+                <defs>
+                    <symbol id="icon-twitter" viewBox="0 0 32 32">
+                    <title>twitter</title>
+                    <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                    </symbol>
+        
+                    <symbol id="icon-facebook" viewBox="0 0 32 32">
+                     <title>facebook</title>
+                    <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                    </symbol>
+                    
+                    <symbol id="icon-pinterest" viewBox="0 0 56.693 56.693">
+                        <title>pinterest</title>
+                        <path d="M30.374,4.622c-13.586,0-20.437,9.74-20.437,17.864c0,4.918,1.862,9.293,5.855,10.922c0.655,0.27,1.242,0.01,1.432-0.715  c0.132-0.5,0.445-1.766,0.584-2.295c0.191-0.717,0.117-0.967-0.412-1.594c-1.151-1.357-1.888-3.115-1.888-5.607  c0-7.226,5.407-13.695,14.079-13.695c7.679,0,11.898,4.692,11.898,10.957c0,8.246-3.649,15.205-9.065,15.205  c-2.992,0-5.23-2.473-4.514-5.508c0.859-3.623,2.524-7.531,2.524-10.148c0-2.34-1.257-4.292-3.856-4.292  c-3.058,0-5.515,3.164-5.515,7.401c0,2.699,0.912,4.525,0.912,4.525s-3.129,13.26-3.678,15.582  c-1.092,4.625-0.164,10.293-0.085,10.865c0.046,0.34,0.482,0.422,0.68,0.166c0.281-0.369,3.925-4.865,5.162-9.359  c0.351-1.271,2.011-7.859,2.011-7.859c0.994,1.896,3.898,3.562,6.986,3.562c9.191,0,15.428-8.379,15.428-19.595  C48.476,12.521,41.292,4.622,30.374,4.622z"/>
+                    </symbol> 
+
+                    <symbol id="icon-dribbble" viewBox="0 0 24 24">
+                        <title>dribbble</title>
+                        <path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/>
+                    </symbol>
+                    
+                    <symbol id="icon-email" viewBox="0 0 478.125 478.125">
+                        <title>email</title>
+                        <g>
+                                <path d="M439.875,86.062H38.25C17.212,86.062,0,103.275,0,124.312v229.5c0,21.037,17.212,38.25,38.25,38.25h401.625
+                                    c21.037,0,38.25-17.213,38.25-38.25v-229.5C478.125,103.275,460.912,86.062,439.875,86.062z M430.312,105.188l-191.25,166.388
+                                    L47.812,105.188H430.312z M459,353.812c0,11.475-7.65,19.125-19.125,19.125H38.25c-11.475,0-19.125-9.562-19.125-19.125v-229.5
+                                    c0-5.737,1.913-9.562,5.737-13.388l214.2,185.513l214.2-185.513c3.825,3.825,5.737,7.65,5.737,13.388V353.812z"/>
+                        </g>
+                    </symbol>
+
+                    <symbol id="icon-star" viewBox="0 0 426.667 426.667">
+                        <title>star</title>
+                        <polygon points="213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91 
+                        81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 "/>
+                    </symbol>
+                   
+                </defs>
+            </svg>
+
+
+
+    <div class="page-wrapper">
+        <section class="header">
+            <div class="header__logo"></div>
+            <div class="header__menu">
+                <input type="checkbox" id="toggel" class="menu-bar-toggel" />
+                <label for="toggel" class="toggel">
+                    <div class="hamburger">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                            <nav class="navigation navigation-list">
+                                
+                                <div>
+                                    <a class="navigation-list__link" href="#about-us">ABOUT US</a></div>
+                                <div>
+                                    <a class="navigation-list__link" href="#featured-works">FEATURED WORKS</a></div>
+                                <div>
+                                    <a class="navigation-list__link" href="#our-services">OUR SERVICES</a></div>
+                                <div>
+                                    <a class="navigation-list__link" href="#small-team">SMALL TEAM</a></div>
+                                <div>
+                                    <a class="navigation-list__link" href="#what-they-says">WHAT THEY SAYS</a></div>
+                                <div>
+                                    <a class="navigation-list__link" href="#contact">CONTACTS</a></div>
+                                                                
+                            </nav>
+                        </div>
+                        </div>
+                    </label>
+            </div>
+        </section>
+        <h2 class="header__title">
+                SAY HELLO TO<b> SHOPNO! </b><br>
+                <b> AGENCY </b> CORPORATE SHOPNO THEME
+                <p class="header__btn">CONTACT US</p>
+        </h2>
+
+        <section id="about-us" class="title-block">
+            <h5 class="title-block__title">ABOUT US</h5>
+            <p class="title-block__text">
+                LOREM IPSUM DOLOR SIT AMET EVENT LANDING TEMPLATE
+            </p>
+        </section>
+
+
+        <section class="about">
+            <div class="about__image"></div>
+            <div class="about__article">
+                <h4>WE ACTUALLY DO AMAZING WORKS</h4>
+                <p>A visual approach is an approach to a runway at an airport 
+                    conducted under instrument flight rules. The pilot must at all 
+                    times have either the airport or the preceding aircraft in approach 
+                    correct sight. conducted under instrument flight rules. The pilot 
+                    must at all times.</p>
+                <p>Preceding aircraft in approach correct sight. conducted under 
+                    instrument flight rules.</p>
+                <h5>WHY WE ARE THE GREAT?</h5>
+                <P>A visual approach is an approach to a runway at an airport 
+                    conducted under instrument flight rules.<br>
+                    The preceding aircraft in approach correct sight.</P>
+            </div>
+        </section>
+
+        <section id="featured-works" class="title-block">
+            <h5 class="title-block__title">FEATURED WORKS</h5>
+            <p class="title-block__text">
+                LOREM IPSUM DOLOR SIT AMET EVENT LANDING TEMPLATE
+            </p>
+        </section>
+
+        <section class="featured">
+            <div class="featured__image"></div>
+            <div class="featured__image"></div>
+            <div class="featured__image"></div>
+            <div class="featured__image"></div>
+            <div class="featured__image"></div>
+            <div class="featured__image"></div>
+        </section>
+
+        <section id="our-services" class="title-block">
+            <h5 class="title-block__title">OUR SERVICES</h5>
+            <p class="title-block__text">
+                LOREM IPSUM DOLOR SIT AMET EVENT LANDING TEMPLATE
+            </p>
+        </section>
+
+        <section class="services">
+            <div class="services-block">
+                <h5 class="services-block__title">
+                    DESIGNING IS THE COOL LOVE FOR.
+                </h5>
+                <p class="services-block__text">
+                    Our most popular service is our Virtual Receptionist. We know that 
+                    sometimes it’s something and you middle most this job was posted 
+                    less than five minutes ago, and we think it’s a good match for you. If 
+                    you submit a proposal now, you’ll be one of the first candidates. You 
+                    may even catch the client while they’re still online.
+                </p>
+                <p class="services-block__footer">&#10006;</p>
+            </div>
+            <div class="services-block">
+                <h5 class="services-block__title">
+                    COOL PSD DESIGN
+                </h5>
+                <p class="services-block__text">
+                    Our most popular service is our we know that sometimes 
+                    it’s something and you middle most...
+                </p>
+                <p class="services-block__footer">KNOW MORE &rarr;</p>
+            </div>
+            <div class="services-block">
+                <h5 class="services-block__title">
+                    DESIGNING IS THE COOL
+                </h5>
+                <p class="services-block__text">
+                    Our most popular service is our Virtual Receptionist.<br> 
+                    We know that...
+                </p>
+                <p class="services-block__footer">KNOW MORE &rarr;</p>
+            </div>
+            <div class="services-block">
+                <h5 class="services-block__title">
+                    PSD TO HTML KORI
+                </h5>
+                <p class="services-block__text">
+                    We know that sometimes 
+                    it’s something and you middle most...
+                </p>
+                <p class="services-block__footer">KNOW MORE &rarr;</p>
+            </div>
+            <div class="services-block">
+                <h5 class="services-block__title">
+                    COOL PSD DESIGN
+                </h5>
+                <p class="services-block__text">
+                    Our most popular service is our new virtual Receptionist 
+                    you middle most...
+                </p>
+                <p class="services-block__footer">KNOW MORE &rarr;</p>
+            </div>
+            <div class="services-block">
+                <h5 class="services-block__title">
+                    DESIGNING IS THE COOL FOR
+                </h5>
+                <p class="services-block__text">
+                    Our most popular service is our new virtual Receptionist.<br> 
+                    We know that sometimes 
+                    it’s something and you middle most...
+                </p>
+                <p class="services-block__footer">KNOW MORE &rarr;</p>
+            </div>
+        </section>
+
+        <section id="small-team" class="title-block">
+            <h5 class="title-block__title">SMALL TEAM</h5>
+            <p class="title-block__text">
+                LOREM IPSUM DOLOR SIT AMET EVENT LANDING TEMPLATE
+            </p>
+        </section>
+
+        <section class="team">
+            <div class="team__photo"></div>
+            <div class="team__photo">
+                <div class="team-text">
+                    <div class="team-text__title">AL RAYHAN <b>/ UI Designer</b></div>
+                    <div class="team-text__main">
+                        Lorem Ipsum is not simply is  an action designer random text
+                        It has roots in a piece. 
+                    </div>
+                    <div class="team-text__icons">
+                        <svg width="30" height="16" fill="#505050">
+                            <use xlink: href = "#icon-facebook"></use>
+                        </svg>
+                        <svg width="30" height="16" fill="#505050">
+                            <use xlink: href = "#icon-twitter"></use>
+                        </svg>
+                        <svg width="30" height="16" fill="#505050">
+                            <use xlink: href = "#icon-dribbble"></use>
+                        </svg>
+                        <svg width="40" height="20" fill="#505050">
+                            <use xlink: href = "#icon-email"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="team__photo"></div>
+            <div class="team__photo"></div>
+            <div class="team__photo"></div>
+            <div class="team__photo"></div>
+        </section>
+
+        <section id="what-they-says" class="title-block">
+            <h5 class="title-block__title">WHAT THEY SAYS</h5>
+            <p class="title-block__text">
+                LOREM IPSUM DOLOR SIT AMET EVENT LANDING TEMPLATE
+            </p>
+        </section>
+
+        <section class="testimonial">
+            <div class="testimonial__photo--bg"></div>
+            <div class="testimonial__photo--bg"></div>
+            <div class="testimonial__photo"></div>
+            <div class="testimonial-text">
+                <div class="testimonial-text__title">
+                    AL RAYHAN <b>/ UI Designer</b>
+                </div>
+                <div class="testimonial-text__main">
+                    Lorem Ipsum is simply dummy text of the printing and you 
+                    standard dummy know that text ever since the 1500s, when an unknown printer took 
+                    a galley of type and scrambled it to make a type specimen book.
+                </div>
+                <div class="testimonial-text__footer">
+                    <svg width="20" height="20" fill="#f2da3b">
+                        <use xlink: href = "#icon-star"></use>
+                    </svg>
+                    <svg width="20" height="20" fill="#f2da3b">
+                        <use xlink: href = "#icon-star"></use>
+                    </svg>
+                    <svg width="20" height="20" fill="#f2da3b">
+                        <use xlink: href = "#icon-star"></use>
+                    </svg>
+                    <svg width="20" height="20" fill="#f2da3b">
+                        <use xlink: href = "#icon-star"></use>
+                    </svg>
+                    <svg width="20" height="20" fill="#f2da3b">
+                        <use xlink: href = "#icon-star"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="testimonial__items">
+                <svg width="15" height="10" fill="#d0d0d0">
+                    <circle r="5" cx="5" cy="5"></circle>
+                </svg>
+                <svg width="15" height="10" fill="#71f6eb">
+                    <circle r="5" cx="5" cy="5"></circle>
+                </svg>
+                <svg width="15" height="10" fill="#d0d0d0">
+                    <circle r="5" cx="5" cy="5"></circle>
+                </svg>
+                <svg width="15" height="10" fill="#d0d0d0">
+                    <circle r="5" cx="5" cy="5"></circle>
+                </svg>
+            </div>
+            <div class="testimonial__arrow">
+                <div class="testimonial__arrow--left">&lsaquo;</div>
+                <div class="testimonial__arrow--right">&rsaquo;</div>
+            </div>
+        </section>
+
+        <section class="block-logos"></section>
+
+    </div>
+
+    <section id="contact" class="footer">
+        <div class="contact-bg">
+            <div class="contact">
+                <div class="contact__form">
+                    <form action="#">
+                        <p>Name*</p>
+                        <input name="name" required>
+                         <p>Subject*</p>
+                        <input required>
+                        <p>E-mail*</p>
+                        <input type="email" required>
+                        <p>Message*</p>
+                        <textarea name="message" required></textarea>
+                        <button type="submit">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <div class="contact__address">
+                    <div>
+                        <p>Address line 1</p>
+                        <p>Address line 2</p>
+                        <p>Phone: +548 945645</p>
+                        <p>Fax: +456 45654546 </p>
+                        <p>Web: www.designagency.net</p>
+                        <p>E-mail: info@designagency.net</p>
+                    </div>
+                    <div class="map"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-bg social">
+            <p>FOLLOW US</p>
+            <div class="icons">
+                <div class="icons__link">
+                    <svg width="25" height="25" fill="#bbb8b9">
+                        <use xlink: href = "#icon-pinterest"></use>
+                    </svg>
+                </div>
+                <div class="icons__link">
+                    <svg width="25" height="25" fill="#bbb8b9">
+                        <use xlink: href = "#icon-twitter"></use>
+                    </svg>
+                </div>
+                <div class="icons__link">
+                    <svg width="25" height="25" fill="#bbb8b9">
+                        <use xlink: href = "#icon-facebook"></use>
+                    </svg>
+                </div>
+                <div class="icons__link">
+                    <svg width="25" height="25" fill="#bbb8b9">
+                        <use xlink: href = "#icon-dribbble"></use>
+                    </svg>
+                </div>
+            </div>
+            <p>Copyright Masum Parvej, All Rights Reserved</p>
+        </div>
+    </section>
+        
+    
+    
+</body>
+</html>

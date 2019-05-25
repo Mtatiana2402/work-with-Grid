@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url("../grid/fonts/Raleway-regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../grid/fonts/Montserrat-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../grid/fonts/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Merriweather-Regular";
+    src: url("../grid/fonts/Merriweather-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.page-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    overflow: hidden;
+    @media (max-width: 1200px) {
+        width: 100vw;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    @media (max-width: 768px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+

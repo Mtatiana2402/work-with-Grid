@@ -1,0 +1,238 @@
+$text-MonB: "Montserrat-Bold";
+$text-MonReg: "Montserrat-Regular";
+$text-RalReg: "Raleway-Regular";
+$text-MerriwReg: "Merriweather-Regular";
+$text-ColorMain: white;
+$BG-contact: rgba(2, 22, 35, 0.7);
+$BG-btn: #6eeee4;
+$text-btn: #505050;
+$BG: #262b2e;
+$BG-icon: #424648;
+$width-md: 768px;
+
+.footer {
+    margin: 0 auto;
+    .contact-bg {
+        width: 100vw;
+        height: 53vw;
+        background-image: url(images/bg-footer.png);
+        background-size: 100% 100%;
+        @media (max-width: 768px) {
+            height: auto;
+        }
+
+        .contact {
+            width: 1162px;
+            margin: 0 auto;
+            padding-top: 12.5vw;
+            display: grid;
+            grid-template-rows: 460px;
+            grid-template-columns: 635px minmax(10px, 1fr) 500px;
+
+            @media (min-width: 768.1px) and (max-width: 1200px) {
+                width: 95vw;
+                margin: 0 auto;
+                grid-template-rows: 38vw;
+                grid-template-columns: 52vw minmax(10px, 1fr) 41vw;
+            }
+            @media (max-width: 768px) {
+                width: 85vw;
+                margin: 0 auto;
+                padding-top: 0;
+                grid-template-rows: minmax(250px, 38vw) minmax(200px, 38vw);
+                grid-template-columns: 85vw;
+                grid-gap: 1vw;
+            }
+
+            &__form {
+                grid-area: 1/1/2/2;
+                background-color: $BG-contact;
+                @media (max-width: 1200px) {
+                    margin-left: 35px;
+                }
+                @media (max-width: 768px) {
+                    margin-left: 15px;
+                }
+
+                form {
+                    margin: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    color: $text-ColorMain;
+                    opacity: .9;
+                    font: {
+                        family: $text-RalReg;
+                        size: 15px;
+                        weight: 200;
+                    }
+                    @media (max-width: 768px) {
+                        margin: 10px;
+                        font-size: 12px;
+                    }
+                    p {
+                        @media (max-width: 1200px) {
+                            margin: 5px 7px;
+                        }
+                    }
+                    input, textarea {
+                        border: none;
+                        background: none;
+                        border-bottom: 1px solid lightgray;
+                        color: $text-ColorMain;
+                    }
+                    textarea {
+                        height: 50px;
+                        @media (max-width: 1200px) {
+                            height: 4.1vw;
+                        }
+                    }
+                    button {
+                        width: 245px;
+                        height: 55px;
+                        margin-top: 25px;
+                        text-align: center;
+                        font-family: $text-MonReg;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: $text-btn;
+                        background-color: $BG-btn;
+                        border-radius: 5px;
+                        border: none;
+
+                        @media (min-width: 768.1px) and (max-width: 1200px) {
+                            width: 20vw;
+                            height: 4.5vw;
+                            margin-top: 2vw;
+                            font-size: 16px;
+                        }
+                        @media (max-width: 768px) {
+                            width: 130px;
+                            height: 30px;
+                            margin-top: 15px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &__address {
+                grid-area: 1/3/2/4;
+                background-color: $BG-contact;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: $text-ColorMain;
+                font: {
+                    family: $text-RalReg;
+                    size: 15px;
+                    weight: 200;
+                }
+                @media (max-width: 768px) {
+                    margin-left: 15px;
+                    grid-area: 2/1/3/2;
+                    font-size: 12px;
+                    margin-bottom: 1vw;
+                }
+                p {
+                    margin: .5em 15px;
+                    opacity: .9;
+                    @media (max-width: 768px) {
+                        margin: 5px 10px;
+                    }
+                }
+                p:first-child {
+                    margin-top: 30px;
+                    @media (max-width: 1200px) {
+                        margin-top: 2.5vw;
+                    }
+                }
+                p:nth-child(5) {
+                    margin-top: 20px;
+                    @media (max-width: 1200px) {
+                        margin-top: 10px;
+                    }
+                }
+                // p:nth-child(6) {
+                //     margin-bottom: 20px;
+                // }
+                .map {
+                    margin: 0 15px 15px;
+                    width: 470px;
+                    height: 224px;
+                    background-image: url(images/map.png);
+                    background-size: 100% 100%;
+                    @media (min-width: 768.1px) and (max-width: 1200px) {
+                        margin: 0 1.25vw 1.25vw;
+                        width: 38.5vw;
+                        height: 17vw;
+                    }
+                    @media (max-width: 768px) {
+                        margin: 0 10px 10px;
+                        width: auto;
+                        height: 17vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-bg {
+        width: 100vw;
+        height: 30vw;
+        margin: 0 auto;
+        background-color: $BG;
+    }
+    .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $text-ColorMain;
+
+        p {
+            font-family: $text-RalReg;
+            font-size: 16px; 
+            @media (max-width: 768px) {
+                margin: 5px;
+                font-size: 13px;
+            }
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 40px;
+            @media (max-width: 768px) {
+                margin: 5px 0 10px;
+            }
+
+            
+            &__link {
+                width: 50px;
+                height: 50px;
+                background-color: $BG-icon;
+                margin-right: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                @media (max-width: 768px) {
+                    width: 25px;
+                    height: 25px;
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+
+                &:hover {
+                    background-color: $BG-btn;
+                    svg {
+                        fill: black;
+                    }
+                }
+            }
+        }
+    }
+    
+}
